@@ -1,7 +1,7 @@
 import os
 import sys
 
-import matplotlib.animation as animation
+#import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import nibabel as nib
 import numpy as np
@@ -53,14 +53,13 @@ for id in user_ids:
     data = np.asarray(data)
     data = np.squeeze(data)
     user_data[id] = data
-    print("{}, Shape: {}".format(id, data.shape))
+#     print("{}, Shape: {}".format(id, data.shape))
     if data.shape[2]<small_3d:
             small_3d=data.shape[2]
-    #gif_show(data, id)
-   #break
 
 #Making thrid dimension same by slicing from begining and end
 print("------------------")
+x_input = []
 for id in user_ids:
         data=user_data[id]
         diff_3d = data.shape[2] - small_3d
@@ -70,8 +69,8 @@ for id in user_ids:
                 data=data[:,:,begining_diff.__index__():]
                 data=data[:,:,:-end_diff.__index__()]
         user_data[id]=data
-        print("{}, Shape: {}".format(id, data.shape))
-#gif_show(data, id)
+        x_input.append(data)
+        # print("{}, Shape: {}".format(id, data.shape))
 
 #Get reasearch group from metadata
 parent_path = './ADNI_metadata'
@@ -80,47 +79,54 @@ parent_path = os.path.abspath(parent_path)
 user_research_grp={}
 user_idnames = os.listdir(parent_path)
 for user_id in user_idnames:
-        path=os.path.join(parent_path,user_id)
+        path = os.path.join(parent_path,user_id)
         xmldoc = minidom.parse(path)
-        id=xmldoc.getElementsByTagName("subjectIdentifier")[0].firstChild.data
-        reasearch_grp=xmldoc.getElementsByTagName("researchGroup")[0].firstChild.data
-        user_research_grp[id]=reasearch_grp
+        id = xmldoc.getElementsByTagName("subjectIdentifier")[0].firstChild.data
+        reasearch_grp = xmldoc.getElementsByTagName("researchGroup")[0].firstChild.data
+        user_research_grp[id] = reasearch_grp
 
 print("------------------")
+# for id in user_ids:
+#          print("{}, Shape: {},Research Group: {}".format(id, user_data[id].shape,user_research_grp[id]))
+
+y_input = []
 for id in user_ids:
-         print("{}, Shape: {},Research Group: {}".format(id, user_data[id].shape,user_research_grp[id]))
+        print(id)
+        y_input.append(user_research_grp[id])
+
 
 #One hot encoding of the data
-values = list(user_research_grp.values())
-val = array(values)
-print(val)
-integer_encoded = LabelEncoder().fit_transform(val)
-#print(integer_encoded)
+integer_encoded = LabelEncoder().fit_transform(y_input)
 onehot_encoder = OneHotEncoder(sparse=False)
 integer_encoded = integer_encoded.reshape(len(integer_encoded), 1)
 onehot_encoded = onehot_encoder.fit_transform(integer_encoded)
-print(onehot_encoded)
+print("Shape of One Hot Encoding: {}".format(np.shape(onehot_encoded)))
 
+x_input = np.expand_dims(x_input, axis=4)
+print("Shape of input data: {}".format(np.shape(x_input)))
 
 #A simple NN architecture
-# print(user_data)
-x = user_data
-y = onehot_encoded
-model = Sequential()    
+model = Sequential()
+model.add(Conv3D(32, kernel_size=(3, 3, 3), input_shape=(256, 256, 44, 1)))
+model.add(Activation('relu'))
+model.add(Conv3D(32, kernel_size=(3, 3, 3)))
+model.add(Activation('softmax'))
+model.add(MaxPooling3D(pool_size=(3, 3, 3)))
+model.add(Dropout(0.25))
 
-model.add(Conv3D(64, 3, strides=1, input_shape=(256, 256, 44, 1)))      
-model.add(Activation("relu"))
-model.add(MaxPooling3D(pool_size=(2,2,2)))
-
-model.add(Conv3D(128, 3, strides=1))
-model.add(Activation("relu"))
-model.add(MaxPooling3D(pool_size=(2,2,2)))
+model.add(Conv3D(64, kernel_size=(3, 3, 3)))
+model.add(Activation('relu'))
+model.add(Conv3D(64, kernel_size=(3, 3, 3)))
+model.add(Activation('softmax'))
+model.add(MaxPooling3D(pool_size=(3, 3, 3)))
+model.add(Dropout(0.25))
 
 model.add(Flatten())
-model.add(Dense(64))
+model.add(Dense(512, activation='sigmoid'))
+model.add(Dropout(0.5))
+model.add(Dense(3, activation='softmax'))
 
-model.add(Dense(1))
-model.add(Activation("sigmoid"))
 
 model.compile(loss=losses.binary_crossentropy, optimizer="adam", metrics=['accuracy'])
-model.fit(x,y,batch_size=2,epochs=3)
+history = model.fit(x_input, onehot_encoded, batch_size=2, epochs=3)
+print(history)
