@@ -121,6 +121,14 @@ model.add(Activation('softmax'))
 model.add(MaxPooling3D(pool_size=(3, 3, 3)))
 model.add(Dropout(0.25))
 
+model.add(Conv3D(128, kernel_size=(3, 3, 3)))
+model.add(Activation('relu'))
+model.add(Conv3D(128, kernel_size=(3, 3, 3)))
+model.add(Activation('softmax'))
+model.add(MaxPooling3D(pool_size=(3, 3, 3)))
+model.add(Dropout(0.25))
+
+
 model.add(Flatten())
 model.add(Dense(512, activation='sigmoid'))
 model.add(Dropout(0.5))
@@ -128,5 +136,5 @@ model.add(Dense(3, activation='softmax'))
 
 
 model.compile(loss=losses.binary_crossentropy, optimizer="adam", metrics=['accuracy'])
-history = model.fit(x_input, onehot_encoded, batch_size=2, epochs=3)
+history = model.fit(x_input, onehot_encoded, batch_size=2, epochs=15)
 print(history)
