@@ -132,5 +132,5 @@ model.add(Dense(3, activation='softmax'))
 
 
 model.compile(loss=losses.binary_crossentropy, optimizer="adam", metrics=['accuracy'])
-history = model.fit(x_input, onehot_encoded, batch_size=2, epochs=15)
+history = model.fit(x_input, onehot_encoded, batch_size=2, epochs=5)
 print(history)
