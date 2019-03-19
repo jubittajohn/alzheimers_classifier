@@ -113,6 +113,7 @@ model.add(Conv3D(32, kernel_size=(3, 3, 3)))
 model.add(Activation('softmax'))
 model.add(MaxPooling3D(pool_size=(3, 3, 3)))
 model.add(Dropout(0.25))
+model.summary()
 
 model.add(Conv3D(64, kernel_size=(3, 3, 3)))
 model.add(Activation('relu'))
@@ -120,6 +121,7 @@ model.add(Conv3D(64, kernel_size=(3, 3, 3)))
 model.add(Activation('softmax'))
 model.add(MaxPooling3D(pool_size=(3, 3, 3)))
 model.add(Dropout(0.25))
+model.summary()
 
 model.add(Conv3D(128, kernel_size=(3, 3, 3)))
 model.add(Activation('relu'))
@@ -127,6 +129,7 @@ model.add(Conv3D(128, kernel_size=(3, 3, 3)))
 model.add(Activation('softmax'))
 model.add(MaxPooling3D(pool_size=(3, 3, 3)))
 model.add(Dropout(0.25))
+model.summary
 
 
 model.add(Flatten())
