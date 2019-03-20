@@ -110,26 +110,22 @@ model = Sequential()
 model.add(Conv3D(32, kernel_size=(3, 3, 3), input_shape=(256, 256, 44, 1)))
 model.add(Activation('relu'))
 model.add(Conv3D(32, kernel_size=(3, 3, 3)))
-model.add(Activation('softmax'))
+model.add(Activation('relu'))
 model.add(MaxPooling3D(pool_size=(3, 3, 3)))
 model.add(Dropout(0.25))
-model.summary()
 
 model.add(Conv3D(64, kernel_size=(3, 3, 3)))
 model.add(Activation('relu'))
 model.add(Conv3D(64, kernel_size=(3, 3, 3)))
-model.add(Activation('softmax'))
+model.add(Activation('relu'))
 model.add(MaxPooling3D(pool_size=(3, 3, 3)))
 model.add(Dropout(0.25))
-model.summary()
-
-
 
 model.add(Flatten())
-model.add(Dense(512, activation='sigmoid'))
+model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(3, activation='softmax'))
-
+model.summary()
 
 model.compile(loss=losses.binary_crossentropy, optimizer="adam", metrics=['accuracy'])
 history = model.fit(x_input, onehot_encoded, batch_size=2, epochs=15)
