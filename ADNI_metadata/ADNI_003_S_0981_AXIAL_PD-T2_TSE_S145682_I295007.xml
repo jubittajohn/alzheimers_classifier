@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idaxs xmlns="http://ida.loni.usc.edu" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="/xsds/idaxs_2_0.xsd">
+<project xmlns="">
+ <projectIdentifier>ADNI</projectIdentifier>
+ <projectDescription>Alzheimer&#039;s Disease Neuroimaging Initiative</projectDescription>
+ <siteKey>003</siteKey>
+ <subject>
+  <subjectIdentifier>003_S_0981</subjectIdentifier>
+  <researchGroup>CN</researchGroup>
+  <subjectSex>F</subjectSex>
+  <subjectInfo item="APOE A1">3</subjectInfo>
+  <subjectInfo item="APOE A2">3</subjectInfo>
+  <visit>
+   <visitIdentifier>ADNI2 Initial Visit-Cont Pt</visitIdentifier>
+   <assessment name="MMSE">
+    <component name="MMSE Total Score">
+     <assessmentScore attribute="MMSCORE">30.0</assessmentScore>
+    </component>
+   </assessment>
+   <assessment name="GDSCALE">
+    <component name="GDS Total Score">
+     <assessmentScore attribute="GDTOTAL">2.0</assessmentScore>
+    </component>
+   </assessment>
+   <assessment name="CDR">
+    <component name="CDR Total Score">
+     <assessmentScore attribute="CDGLOBAL">0.0</assessmentScore>
+    </component>
+   </assessment>
+   <assessment name="Functional Assessment Questionnaire">
+    <component name="FAQ Total score">
+     <assessmentScore attribute="FAQTOTAL">0.0</assessmentScore>
+    </component>
+   </assessment>
+  </visit>
+  <study>
+   <studyIdentifier>44212</studyIdentifier>
+   <subjectAge>89.8877</subjectAge>
+   <ageQualifier>Y</ageQualifier>
+   <weightKg>79.8323</weightKg>
+   <postMortem>F</postMortem>
+   <series>
+    <seriesIdentifier>145682</seriesIdentifier>
+    <modality>MRI</modality>
+    <dateAcquired>2012-03-29</dateAcquired>
+   </series>
+   <imagingProtocol>
+    <imageUID>295007</imageUID>
+    <description>AXIAL PD-T2 TSE</description>
+    <protocolTerm>
+     <protocol term="Acquisition Type">2D</protocol>
+     <protocol term="Weighting">T2</protocol>
+     <protocol term="Pulse Sequence">SE</protocol>
+     <protocol term="Slice Thickness">3.0</protocol>
+     <protocol term="TE">102.0</protocol>
+     <protocol term="TR">3000.0</protocol>
+     <protocol term="TI">0.0</protocol>
+     <protocol term="Coil">HE</protocol>
+     <protocol term="Flip Angle">150.0</protocol>
+     <protocol term="Acquisition Plane">AXIAL</protocol>
+     <protocol term="Matrix X">228.0</protocol>
+     <protocol term="Matrix Y">256.0</protocol>
+     <protocol term="Matrix Z">48.0</protocol>
+     <protocol term="Pixel Spacing X">0.9375</protocol>
+     <protocol term="Pixel Spacing Y">0.9375</protocol>
+     <protocol term="Manufacturer">SIEMENS</protocol>
+     <protocol term="Mfg Model">Symphony</protocol>
+     <protocol term="Field Strength">1.5</protocol>
+    </protocolTerm>
+   </imagingProtocol>
+  </study>
+ </subject>
+</project>
+</idaxs>

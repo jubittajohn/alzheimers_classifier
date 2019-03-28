@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idaxs xmlns="http://ida.loni.usc.edu" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="/xsds/idaxs_2_0.xsd">
+<project xmlns="">
+ <projectIdentifier>ADNI</projectIdentifier>
+ <projectDescription>Alzheimer&#039;s Disease Neuroimaging Initiative</projectDescription>
+ <siteKey>003</siteKey>
+ <subject>
+  <subjectIdentifier>003_S_4119</subjectIdentifier>
+  <researchGroup>CN</researchGroup>
+  <subjectSex>M</subjectSex>
+  <subjectInfo item="APOE A1">3</subjectInfo>
+  <subjectInfo item="APOE A2">3</subjectInfo>
+  <visit>
+   <visitIdentifier>ADNI2 Year 4 Visit</visitIdentifier>
+  </visit>
+  <study>
+   <studyIdentifier>126538</studyIdentifier>
+   <subjectAge>84.0</subjectAge>
+   <ageQualifier>Y</ageQualifier>
+   <weightKg>81.65</weightKg>
+   <postMortem>F</postMortem>
+   <series>
+    <seriesIdentifier>723382</seriesIdentifier>
+    <modality>MRI</modality>
+    <dateAcquired>2016-08-23</dateAcquired>
+   </series>
+   <imagingProtocol>
+    <imageUID>1043733</imageUID>
+    <description>Axial T2-FSE WITH Fat Sat</description>
+    <protocolTerm>
+     <protocol term="Acquisition Type">2D</protocol>
+     <protocol term="Weighting">PD</protocol>
+     <protocol term="Pulse Sequence">SE</protocol>
+     <protocol term="Slice Thickness">4.0</protocol>
+     <protocol term="TE">76.8</protocol>
+     <protocol term="TR">4300.0</protocol>
+     <protocol term="TI">0.0</protocol>
+     <protocol term="Coil">8HRBRAIN</protocol>
+     <protocol term="Flip Angle">90.0</protocol>
+     <protocol term="Acquisition Plane">AXIAL</protocol>
+     <protocol term="Matrix X">256.0</protocol>
+     <protocol term="Matrix Y">256.0</protocol>
+     <protocol term="Matrix Z">42.0</protocol>
+     <protocol term="Pixel Spacing X">0.9375</protocol>
+     <protocol term="Pixel Spacing Y">0.9375</protocol>
+     <protocol term="Manufacturer">GE MEDICAL SYSTEMS</protocol>
+     <protocol term="Mfg Model">Signa HDxt</protocol>
+     <protocol term="Field Strength">3.0</protocol>
+    </protocolTerm>
+   </imagingProtocol>
+  </study>
+ </subject>
+</project>
+</idaxs>

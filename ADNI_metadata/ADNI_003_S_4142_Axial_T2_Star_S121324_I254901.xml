@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idaxs xmlns="http://ida.loni.usc.edu" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="/xsds/idaxs_2_0.xsd">
+<project xmlns="">
+ <projectIdentifier>ADNI</projectIdentifier>
+ <projectDescription>Alzheimer&#039;s Disease Neuroimaging Initiative</projectDescription>
+ <siteKey>003</siteKey>
+ <subject>
+  <subjectIdentifier>003_S_4142</subjectIdentifier>
+  <researchGroup>AD</researchGroup>
+  <subjectSex>F</subjectSex>
+  <visit>
+   <visitIdentifier>ADNI2 Screening MRI-New Pt</visitIdentifier>
+  </visit>
+  <study>
+   <studyIdentifier>37436</studyIdentifier>
+   <subjectAge>89.7452</subjectAge>
+   <ageQualifier>Y</ageQualifier>
+   <weightKg>72.575</weightKg>
+   <postMortem>F</postMortem>
+   <series>
+    <seriesIdentifier>121324</seriesIdentifier>
+    <modality>MRI</modality>
+    <dateAcquired>2011-08-31</dateAcquired>
+   </series>
+   <imagingProtocol>
+    <imageUID>254901</imageUID>
+    <description>Axial T2 Star</description>
+    <protocolTerm>
+     <protocol term="Acquisition Type">2D</protocol>
+     <protocol term="Weighting">T2</protocol>
+     <protocol term="Pulse Sequence">GR</protocol>
+     <protocol term="Slice Thickness">4.0</protocol>
+     <protocol term="TE">20.0</protocol>
+     <protocol term="TR">650.0</protocol>
+     <protocol term="TI">0.0</protocol>
+     <protocol term="Coil">8HRBRAIN</protocol>
+     <protocol term="Flip Angle">20.0</protocol>
+     <protocol term="Acquisition Plane">AXIAL</protocol>
+     <protocol term="Matrix X">256.0</protocol>
+     <protocol term="Matrix Y">256.0</protocol>
+     <protocol term="Matrix Z">44.0</protocol>
+     <protocol term="Pixel Spacing X">0.7813</protocol>
+     <protocol term="Pixel Spacing Y">0.7813</protocol>
+     <protocol term="Manufacturer">GE MEDICAL SYSTEMS</protocol>
+     <protocol term="Mfg Model">Signa HDxt</protocol>
+     <protocol term="Field Strength">3.0</protocol>
+    </protocolTerm>
+   </imagingProtocol>
+  </study>
+ </subject>
+</project>
+</idaxs>
