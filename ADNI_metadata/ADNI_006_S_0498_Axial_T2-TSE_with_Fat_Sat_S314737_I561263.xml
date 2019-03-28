@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idaxs xmlns="http://ida.loni.usc.edu" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="/xsds/idaxs_2_0.xsd">
+<project xmlns="">
+ <projectIdentifier>ADNI</projectIdentifier>
+ <projectDescription>Alzheimer&#039;s Disease Neuroimaging Initiative</projectDescription>
+ <siteKey>006</siteKey>
+ <subject>
+  <subjectIdentifier>006_S_0498</subjectIdentifier>
+  <researchGroup>CN</researchGroup>
+  <subjectSex>M</subjectSex>
+  <subjectInfo item="APOE A1">2</subjectInfo>
+  <subjectInfo item="APOE A2">4</subjectInfo>
+  <visit>
+   <visitIdentifier>ADNI2 Year 4 Visit</visitIdentifier>
+   <assessment name="MMSE">
+    <component name="MMSE Total Score">
+     <assessmentScore attribute="MMSCORE">30.0</assessmentScore>
+    </component>
+   </assessment>
+   <assessment name="GDSCALE">
+    <component name="GDS Total Score">
+     <assessmentScore attribute="GDTOTAL">1.0</assessmentScore>
+    </component>
+   </assessment>
+   <assessment name="CDR">
+    <component name="CDR Total Score">
+     <assessmentScore attribute="CDGLOBAL">0.0</assessmentScore>
+    </component>
+   </assessment>
+   <assessment name="Functional Assessment Questionnaire">
+    <component name="FAQ Total score">
+     <assessmentScore attribute="FAQTOTAL">0.0</assessmentScore>
+    </component>
+   </assessment>
+  </visit>
+  <study>
+   <studyIdentifier>83067</studyIdentifier>
+   <subjectAge>80.0329</subjectAge>
+   <ageQualifier>Y</ageQualifier>
+   <weightKg>79.0</weightKg>
+   <postMortem>F</postMortem>
+   <series>
+    <seriesIdentifier>314737</seriesIdentifier>
+    <modality>MRI</modality>
+    <dateAcquired>2015-11-23</dateAcquired>
+   </series>
+   <imagingProtocol>
+    <imageUID>561263</imageUID>
+    <description>Axial T2-TSE with Fat Sat</description>
+    <protocolTerm>
+     <protocol term="Acquisition Type">2D</protocol>
+     <protocol term="Weighting">PD</protocol>
+     <protocol term="Pulse Sequence">SE</protocol>
+     <protocol term="Slice Thickness">4.0</protocol>
+     <protocol term="TE">80.0</protocol>
+     <protocol term="TR">3000.0</protocol>
+     <protocol term="TI">0.0</protocol>
+     <protocol term="Coil">MULTI COIL</protocol>
+     <protocol term="Flip Angle">90.0</protocol>
+     <protocol term="Acquisition Plane">AXIAL</protocol>
+     <protocol term="Matrix X">256.0</protocol>
+     <protocol term="Matrix Y">256.0</protocol>
+     <protocol term="Matrix Z">44.0</protocol>
+     <protocol term="Pixel Spacing X">0.9375</protocol>
+     <protocol term="Pixel Spacing Y">0.9375</protocol>
+     <protocol term="Manufacturer">Philips Medical Systems</protocol>
+     <protocol term="Mfg Model">Ingenia</protocol>
+     <protocol term="Field Strength">3.0</protocol>
+    </protocolTerm>
+   </imagingProtocol>
+  </study>
+ </subject>
+</project>
+</idaxs>
