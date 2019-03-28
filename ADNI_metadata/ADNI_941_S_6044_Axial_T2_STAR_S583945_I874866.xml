@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idaxs xmlns="http://ida.loni.usc.edu" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="/xsds/idaxs_2_0.xsd">
+<project xmlns="">
+ <projectIdentifier>ADNI</projectIdentifier>
+ <projectDescription>Alzheimer&#039;s Disease Neuroimaging Initiative</projectDescription>
+ <siteKey>941</siteKey>
+ <subject>
+  <subjectIdentifier>941_S_6044</subjectIdentifier>
+  <researchGroup>CN</researchGroup>
+  <subjectSex>F</subjectSex>
+  <visit>
+   <visitIdentifier>ADNI Screening</visitIdentifier>
+  </visit>
+  <study>
+   <studyIdentifier>113080</studyIdentifier>
+   <subjectAge>75.104</subjectAge>
+   <ageQualifier>Y</ageQualifier>
+   <weightKg>72.5748</weightKg>
+   <postMortem>F</postMortem>
+   <series>
+    <seriesIdentifier>583945</seriesIdentifier>
+    <modality>MRI</modality>
+    <dateAcquired>2017-07-17</dateAcquired>
+   </series>
+   <imagingProtocol>
+    <imageUID>874866</imageUID>
+    <description>Axial T2 STAR</description>
+    <protocolTerm>
+     <protocol term="Acquisition Type">2D</protocol>
+     <protocol term="Weighting">T2</protocol>
+     <protocol term="Pulse Sequence">GR</protocol>
+     <protocol term="Slice Thickness">4.0</protocol>
+     <protocol term="TE">20.0</protocol>
+     <protocol term="TR">650.0</protocol>
+     <protocol term="TI">0.0</protocol>
+     <protocol term="Coil">PA</protocol>
+     <protocol term="Flip Angle">20.0</protocol>
+     <protocol term="Acquisition Plane">AXIAL</protocol>
+     <protocol term="Matrix X">256.0</protocol>
+     <protocol term="Matrix Y">256.0</protocol>
+     <protocol term="Matrix Z">44.0</protocol>
+     <protocol term="Pixel Spacing X">0.85938</protocol>
+     <protocol term="Pixel Spacing Y">0.85938</protocol>
+     <protocol term="Manufacturer">SIEMENS</protocol>
+     <protocol term="Mfg Model">Prisma_fit</protocol>
+     <protocol term="Field Strength">3.0</protocol>
+    </protocolTerm>
+   </imagingProtocol>
+  </study>
+ </subject>
+</project>
+</idaxs>

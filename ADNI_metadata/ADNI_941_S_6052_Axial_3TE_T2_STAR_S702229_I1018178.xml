@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idaxs xmlns="http://ida.loni.usc.edu" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="/xsds/idaxs_2_0.xsd">
+<project xmlns="">
+ <projectIdentifier>ADNI</projectIdentifier>
+ <projectDescription>Alzheimer&#039;s Disease Neuroimaging Initiative</projectDescription>
+ <siteKey>941</siteKey>
+ <subject>
+  <subjectIdentifier>941_S_6052</subjectIdentifier>
+  <researchGroup>MCI</researchGroup>
+  <subjectSex>F</subjectSex>
+  <visit>
+   <visitIdentifier>ADNI3 Year 1 Visit</visitIdentifier>
+  </visit>
+  <study>
+   <studyIdentifier>124385</studyIdentifier>
+   <subjectAge>89.1123</subjectAge>
+   <ageQualifier>Y</ageQualifier>
+   <weightKg>61.6886</weightKg>
+   <postMortem>F</postMortem>
+   <series>
+    <seriesIdentifier>702229</seriesIdentifier>
+    <modality>MRI</modality>
+    <dateAcquired>2018-07-06</dateAcquired>
+   </series>
+   <imagingProtocol>
+    <imageUID>1018178</imageUID>
+    <description>Axial 3TE T2 STAR</description>
+    <protocolTerm>
+     <protocol term="Acquisition Type">2D</protocol>
+     <protocol term="Weighting">T2</protocol>
+     <protocol term="Pulse Sequence">GR</protocol>
+     <protocol term="Slice Thickness">4.0</protocol>
+     <protocol term="TE">6.09</protocol>
+     <protocol term="TR">650.0</protocol>
+     <protocol term="TI">0.0</protocol>
+     <protocol term="Coil">PA</protocol>
+     <protocol term="Flip Angle">20.0</protocol>
+     <protocol term="Acquisition Plane">AXIAL</protocol>
+     <protocol term="Matrix X">256.0</protocol>
+     <protocol term="Matrix Y">256.0</protocol>
+     <protocol term="Matrix Z">44.0</protocol>
+     <protocol term="Pixel Spacing X">0.85938</protocol>
+     <protocol term="Pixel Spacing Y">0.85938</protocol>
+     <protocol term="Manufacturer">SIEMENS</protocol>
+     <protocol term="Mfg Model">Prisma_fit</protocol>
+     <protocol term="Field Strength">3.0</protocol>
+    </protocolTerm>
+   </imagingProtocol>
+  </study>
+ </subject>
+</project>
+</idaxs>
